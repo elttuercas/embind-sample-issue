@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample</title>
+    <script>
+        var Module = {
+            onRuntimeInitialized: function ()
+            {
+                let sample = new Module.Sample;
+                try
+                {
+                    sample.value = 11;
+                    console.log(sample.value);
+                    console.log(sample.json);
+                    console.log(sample.toJsonString());
+                }
+                finally
+                {
+                    sample.delete();
+                }
+
+            }
+        };
+    </script>
+    <script src="build/libsample.js"></script>
+</head>
+<body>
+
+</body>
+</html>
